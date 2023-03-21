@@ -2,13 +2,13 @@
 /**
  * print_sign- checks for lowercase character
  * @n: parameter
- * Return: 1 if the 'c' character is lowercase, 0 otherwise
+ * Return: 1 or -1 or 0
  */
 int print_sign(int n)
 {
 	if (n > 0)
 {
-		putchar ('+');
+		_putchar ('+');
 		return (1);
 }
 	else if (n > 0)
