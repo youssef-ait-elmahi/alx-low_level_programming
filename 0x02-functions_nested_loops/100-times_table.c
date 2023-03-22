@@ -1,74 +1,72 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-  * print_coulmn - prints coulmn
-  * @i: arg
-  * @j: arg
-  * @num: arg
-  * @tmp: arg
-  * @n: arg
-  *
-  * Return: non
-*/
-void print_coulmn(int i, int j, int num, int tmp, int n)
+ * printnumber - prints number
+ * @nb: nb to be printed
+ */
+
+void printnumber(int nb)
 {
-	while (j <= n)
+	if (nb < 0)
 	{
-		num = i * j;
-		if ((num / 10) > 0)
-		{
-			tmp = (num / 10);
-			if (tmp > 9)
-			{
-				putchar((tmp / 10) + '0');
-				putchar((tmp % 10) + '0');
-			}
-			else
-			{
-				putchar(' ');
-				putchar((num / 10) + '0');
-			}
-		}
-		else
-		{
-			putchar(' ');
-			putchar(' ');
-		}
-		putchar((num % 10) + '0');
-		if (j != n)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		j++;
+		_putchar('-');
+		nb = nb * (-1);
+		printnumber(nb);
+	}
+	else if (nb >= 10)
+	{
+		printnumber(nb / 10);
+		printnumber(nb % 10);
+	}
+	else
+	{
+		_putchar(nb + 48);
 	}
 }
 
 /**
-  * print_times_table - prints the n times table
-  * @n: the n times
-  * Return: void
-  */
+ * print_times_table - prints number multiplication table
+ * @n: n the number of multiplication columns
+ */
+
 void print_times_table(int n)
 {
 	int i = 0;
-	int j = 1;
+	int j;
 	int num = 0;
-	int tmp = 0;
 
-	if (n > 15 || n < 0)
-		return;
-	while (i <= n)
+	if (n >= 0 && n < 15)
 	{
-		putchar('0');
-		if (n != 0)
+		while (i <= n)
 		{
-			putchar(',');
-			putchar(' ');
+			j = 0;
+			while (j < (n + 1))
+			{
+				num = i * j;
+				printnumber(num);
+				if (j < n && i * (j + 1) < 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else if (j < n && i * (j + 1) >= 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				else if (j < n && i * (j + 1) >= 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				j++;
+			}
+			_putchar('\n');
+			i++;
 		}
-		print_coulmn(i, j, num, tmp, n);
-		putchar('\n');
-		i++;
-		j = 1;
 	}
 }
+
