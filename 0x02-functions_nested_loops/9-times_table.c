@@ -1,33 +1,38 @@
-#include "main.h"
+#include <stdio.h>
+
 /**
- * time_table- prints the last digit of a number
- *
- * Return: (0)
- */
+  * times_table - prints the 9 times table
+  *
+  * Return: void
+  */
 void times_table(void)
 {
-	int i, j, k;
+	int i = 0;
+	int j = 1;
+	int num = 0;
 
-	for (i = 0 ; i < 10 ; i++)
-{
-	for (j = 0 ; j < 10 ; j++)
-{
-	k = j * i;
-	if (j == 0)
-	_putchar(k + '0');
-	if (k < 10 && !j == 0)
-{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(k + '0');
+	while (i <= 9)
+	{
+		putchar('0');
+		putchar(',');
+		putchar(' ');
+		while (j <= 9)
+		{
+			num = i * j;
+			if ((num / 10) > 0)
+				putchar((num / 10) + '0');
+			else
+				putchar(' ');
+			putchar((num % 10) + '0');
+			if (j != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
+		}
+		putchar('\n');
+		i++;
+		j = 1;
+	}
 }
-	if (k >= 10)
-{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(k / 10 + '0');
-	_putchar(k % 10 + '0');
-}
-}
-	_putchar('\n');
