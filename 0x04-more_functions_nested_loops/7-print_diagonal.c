@@ -4,7 +4,7 @@
  * print_line - function that draws a diagonal line on the terminal.
  * @n : parameter
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int l;
 	int i = 0;
