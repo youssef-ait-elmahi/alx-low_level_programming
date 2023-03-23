@@ -4,9 +4,11 @@
  * mul - function that multiplies two integers
  *@a :parameter
  *@b :parameter
- * Return: Always 0.
+ * Return: 1 or 0.
  */
 
 int mul(int a, int b)
 {
-	int
+	return (a * b);
+}
+
