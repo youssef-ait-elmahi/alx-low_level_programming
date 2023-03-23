@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_diagonal -  function that draws a diagonal line on the terminal.
+ * print_line - function that draws a diagonal line on the terminal.
  * @n : parameter
  */
-void print_diagonal(int n)
+void print_line(int n)
 {
 	int l;
 
