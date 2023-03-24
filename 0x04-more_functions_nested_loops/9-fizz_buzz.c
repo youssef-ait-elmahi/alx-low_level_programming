@@ -4,23 +4,30 @@
  *
  * Return : always 0
  */
-
 int main(void)
 {
-	int count;
+	int num;
 
-	count = 1;
-	while (count < 100)
+	for (num = 1; num <= 100; num++)
 	{
-		if (count % 3 == 0 && count % 5 == 0)
-			printf("fizzbuzz, ");
-		else if (count % 3 == 0)
-			printf("fizz, ");
-		else if (count % 5 == 0)
-			printf("buzz, ");
+		if ((num % 3) == 0 && (num % 5) == 0)
+			printf("FizzBuzz");
+
+		else if ((num % 3) == 0)
+			printf("Fizz");
+
+		else if ((num % 5) == 0)
+			printf("Buzz");
+
 		else
-			printf("%d, ", count);
-		count++;
+			printf("%d", num);
+
+		if (num == 100)
+			continue;
+		printf(" ");
 	}
-	printf("buzz\n");
+
+	printf("\n");
+
+	return (0);
 }
