@@ -20,14 +20,14 @@ void puts_half(char *str)
 	if (a % 2 == 0)
 	{
 		a =  a / 2;
-		while (b > a)
+		while (str[a])
 			_putchar(a);
 		a++;
 	}
 	else
 	{
 		a = (a + 1) / 2;
-		while (a != '\n')
+		while (a != '\0')
 		_putchar(a);
 			a++;
 	}
