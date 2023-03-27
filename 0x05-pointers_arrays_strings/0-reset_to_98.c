@@ -6,8 +6,5 @@
  */
 reset_to_98(int *n)
 {
-	n = 402;
-
-	reset_to_98(&n);
-    return (0);
+	*n = 98;
 }
