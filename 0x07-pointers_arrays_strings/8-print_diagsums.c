@@ -1,5 +1,5 @@
 #include <main.h>
-
+#include "main.h"
 /**
  * print_diagsums - function that prints the sum of the two diagonals
  * @a: two d array
