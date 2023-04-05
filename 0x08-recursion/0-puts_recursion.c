@@ -8,6 +8,7 @@ void _print_recursion(char *s)
 {
 	if (*s  == '\0')
 	{
+		_putchar('\n');
 		return;
 	}
 	_putchar(*s);
