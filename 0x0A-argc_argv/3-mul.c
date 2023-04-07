@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * main - program that multiplies two numbers.
  * @argc: The number of command-line arguments
