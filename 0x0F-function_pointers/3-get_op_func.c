@@ -1,10 +1,9 @@
 #include "3-calc.h"
 /**
- * op_add - returns the sum of a and b
- * @a: first integer
- * @b: second integer
+ * get_op_func - selects the correct function
+ * @s: the operator string
  *
- * Return: sum of two integers
+ * Return: appropriate operation or NULL
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -27,4 +26,3 @@ int (*get_op_func(char *s))(int, int)
 	}
 	return (NULL);
 }
-
